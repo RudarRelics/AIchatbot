@@ -4,7 +4,7 @@ const History = ({ darkMode }) => {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/history")
+    fetch("/api/history")
       .then((res) => res.json())
       .then(setHistory)
       .catch((err) => console.error("Error fetching history:", err));
